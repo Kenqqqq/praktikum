@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	
+	<style>
+	body
+	{
+		background-color: #222222;
+		font-size: 24px;
+		color: white; 
+	}
+	</style>
+	
+	<script type="text/javascript">
+	var numer = Math.floor(Math.random()*5)+1;
+	
+	function zmienslide()
+	{
+		numer++;if(numer>5)numer=1;
+	
+		var plik = "<img src=\"slides/slide" + numer + ".jpg\""+ ".png\" />";
+		
+		document.getElementById("slider").innerHTML = plik;
+		
+		setTimeout("zmienslide()",2500);
+	}
+	</script>
+
+	
+</head>
+<body onload="zmienslide()">
+<div id="slider"></div>
+</body>
+</html>
